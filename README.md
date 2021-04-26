@@ -1,0 +1,1 @@
+E-Learning app from the Udemy course available [here](https://www.udemy.com/course/ruby-on-rails-6-learn-20-gems-build-an-e-learning-platform/)
