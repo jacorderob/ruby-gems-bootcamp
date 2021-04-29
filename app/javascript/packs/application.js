@@ -19,3 +19,7 @@ require("stylesheets/application.scss")
 
 // fontawesome
 import "@fortawesome/fontawesome-free/css/all"
+
+// action_text
+require("trix")
+require("@rails/actiontext")
