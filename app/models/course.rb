@@ -1,4 +1,7 @@
 class Course < ApplicationRecord
+  LANGUAGES = %i[English Spanish German]
+  LEVELS = %i[Beginner Intermediate Advanced]
+
   extend FriendlyId
   friendly_id :title, use: :slugged
 
@@ -15,5 +18,13 @@ class Course < ApplicationRecord
 
   def to_s
     title
+  end
+
+  def self.languages
+    LANGUAGES.map { |language| [language, language] }
+  end
+
+  def self.levels
+    LEVELS.map { |level| [level, level] }
   end
 end
