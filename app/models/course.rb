@@ -1,4 +1,7 @@
 class Course < ApplicationRecord
+  include PublicActivity::Model
+  tracked owner: Proc.new { |controller, model| controller.current_user }
+
   LANGUAGES = %i[English Spanish German]
   LEVELS = %i[Beginner Intermediate Advanced]
 
