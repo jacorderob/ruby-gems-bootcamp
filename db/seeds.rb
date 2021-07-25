@@ -1,6 +1,12 @@
-User.create!(email: 'admin@example.com', password: 'admin1', password_confirmation: 'admin1')
+# frozen_string_literal: true
 
-30.times do 
+User.create!(
+  email: 'admin@example.com',
+  password: 'admin1',
+  password_confirmation: 'admin1'
+)
+
+30.times do
   Course.create(
     title: Faker::Educator.course_name,
     description: Faker::TvShows::GameOfThrones.quote,
@@ -8,6 +14,6 @@ User.create!(email: 'admin@example.com', password: 'admin1', password_confirmati
     short_description: Faker::Quote.famous_last_words,
     language: Faker::ProgrammingLanguage.name,
     level: 'Beginner',
-    price: Faker::Number.between(from: 1000, to: 20000)
+    price: Faker::Number.between(from: 1000, to: 20_000)
   )
 end

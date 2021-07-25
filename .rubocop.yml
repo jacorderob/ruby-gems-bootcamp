@@ -1,0 +1,25 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+    - 'config/**/*'
+    - 'bin/**/*'
+
+Layout/EndOfLine:
+  Enabled: false
+
+Layout/LineLength:
+  IgnoredPatterns: ['\A\s*#']
+  Max: 80
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/AbcSize:
+  Max: 25
+
+Style/Documentation:
+  Exclude:
+    - 'test/**/*'
+    - 'db/migrate/**/*'

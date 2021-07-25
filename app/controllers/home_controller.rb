@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Homepage controller
 class HomeController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
   def index
